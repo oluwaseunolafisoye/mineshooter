@@ -32,6 +32,7 @@ public class Gun : MonoBehaviour
         starterAssetsInputs.ShootInput(false);
 
         muzzleFlashSpark.Play();
+
         muzzleFlashGlow.Play();
 
         animator.Play(SHOOT_STRING, 0, 0f);
