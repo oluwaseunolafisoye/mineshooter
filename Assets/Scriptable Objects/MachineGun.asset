@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7312b6782efd20449ec3569ab5a1391, type: 3}
+  m_Name: MachineGun
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponSO
+  WeaponPrefab: {fileID: 2437551776454114657, guid: 1856470e5798f414e8a15f684c139c3a, type: 3}
+  Damage: 2
+  FireRate: 0.2
+  HitVFX: {fileID: 100002, guid: e74af37e539075d428c1f7bd8cdb781d, type: 3}
+  IsAutomatic: 1
