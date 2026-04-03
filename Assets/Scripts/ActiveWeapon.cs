@@ -18,7 +18,6 @@ public class ActiveWeapon : MonoBehaviour
     float defaultFOV;
     float defaultRotationSpeed;
 
-
     void Awake()
     {
         starterAssetsInputs = GetComponentInParent<StarterAssetsInputs>();
@@ -36,7 +35,7 @@ public class ActiveWeapon : MonoBehaviour
     void Update()
     {
         PlayerShoot();
-        HandleZoom();
+        PlayerZoom();
     }
 
     public void SwitchWeapon(WeaponSO weaponSO)
@@ -45,6 +44,7 @@ public class ActiveWeapon : MonoBehaviour
         {
             Destroy(activeWeapon.gameObject);
         }
+
         Weapon newWeapon = Instantiate(weaponSO.WeaponPrefab, transform).GetComponent<Weapon>();
         activeWeapon = newWeapon;
         this.weaponSO = weaponSO;
@@ -64,27 +64,24 @@ public class ActiveWeapon : MonoBehaviour
         animator.Play(SHOOT_STRING, 0, 0f);
         timeSinceLastShot = 0f;
 
-
         if (!weaponSO.IsAutomatic)
         {
             starterAssetsInputs.ShootInput(false);
         }
     }
 
-    void HandleZoom()
+    void PlayerZoom()
     {
         if (!weaponSO.CanZoom) return;
 
         if (starterAssetsInputs.zoom)
         {
-            // Implement zoom functionality here
             playerCamera.m_Lens.FieldOfView = weaponSO.ZoomFOV;
             zoomOverlay.SetActive(true);
             firstPersonController.ChangeRotationSpeed(weaponSO.ZoomRotationSpeed);
         }
         else
         {
-            // Implement zoom out functionality here
             playerCamera.m_Lens.FieldOfView = defaultFOV;
             zoomOverlay.SetActive(false);
             firstPersonController.ChangeRotationSpeed(defaultRotationSpeed);
