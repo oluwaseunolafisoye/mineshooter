@@ -1,8 +1,9 @@
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] int health = 3;
+
+    [SerializeField] int health = 5;
 
     int currentHealth;
     void Awake()
@@ -12,10 +13,12 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-
         currentHealth -= damage;
+        Debug.Log(damage + " damage dealt. Current health: " + currentHealth);
+
         if (currentHealth <= 0)
         {
+            Debug.Log("Player Died");
             Die();
         }
     }
@@ -24,4 +27,5 @@ public class EnemyHealth : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
 }
