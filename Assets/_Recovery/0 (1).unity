@@ -1174,11 +1174,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2840020051092125351, guid: 3f274e01cd0711b42bd5e80c70579489, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 43.9
+      value: 43.91
       objectReference: {fileID: 0}
     - target: {fileID: 2840020051092125351, guid: 3f274e01cd0711b42bd5e80c70579489, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.218
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2840020051092125351, guid: 3f274e01cd0711b42bd5e80c70579489, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16308,6 +16308,10 @@ PrefabInstance:
     - target: {fileID: 5393215578589016642, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393215578589016642, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5393215578589016655, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_CastShadows
