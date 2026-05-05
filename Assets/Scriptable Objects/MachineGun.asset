@@ -21,3 +21,5 @@ MonoBehaviour:
   ZoomFOV: 30
   ZoomRotationSpeed: 0.3
   MagazineSize: 56
+  FireSound: {fileID: 8300000, guid: 6e7f32c8ddfe3f04bb22fbd5d23cdf61, type: 3}
+  FireSoundVolume: 1

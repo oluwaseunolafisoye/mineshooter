@@ -1,4 +1,5 @@
 using Cinemachine;
+using StarterAssets;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] CinemachineVirtualCamera deathCamera;
     // [SerializeField] Transform weaponCamera;
     [SerializeField] Image[] heartImages;
+    [SerializeField] GameObject gameOverScreen;
 
     int currentHealth;
     int gameOverVirtualCameraPriority = 20;
@@ -30,10 +32,20 @@ public class PlayerHealth : MonoBehaviour
         ChangeShieldUIBars();
         if (currentHealth <= 0)
         {
-            // weaponCamera.parent = null;
-            deathCamera.Priority = gameOverVirtualCameraPriority;
-            Die();
+            GameOver();
         }
+    }
+
+    void GameOver()
+    {
+        // weaponCamera.parent = null;
+        deathCamera.Priority = gameOverVirtualCameraPriority;
+        gameOverScreen.SetActive(true);
+        StarterAssetsInputs starterAssetsInputs = FindFirstObjectByType<StarterAssetsInputs>();
+        starterAssetsInputs.SetCursorState(false);
+        starterAssetsInputs.enabled = false;
+
+        Die();
     }
 
     void Die()

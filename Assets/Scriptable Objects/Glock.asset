@@ -20,4 +20,6 @@ MonoBehaviour:
   CanZoom: 0
   ZoomFOV: 30
   ZoomRotationSpeed: 0.3
-  MagazineSize: 12
+  MagazineSize: 20
+  FireSound: {fileID: 8300000, guid: 3031a801e84015c4ba36a89a9b74e33c, type: 3}
+  FireSoundVolume: 1
