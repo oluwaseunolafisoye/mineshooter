@@ -5,8 +5,8 @@ using UnityEngine.AI;
 public class Robot : MonoBehaviour
 {
     [SerializeField] int damage = 1;
-    [SerializeField] float fireRate = 2f;
-    [SerializeField] float shootRange = 20f;
+    [SerializeField] float fireRate = .5f;
+    [SerializeField] float shootRange = 5f;
 
     FirstPersonController player;
     PlayerHealth playerHealth;

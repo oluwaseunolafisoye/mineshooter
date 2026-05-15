@@ -12,6 +12,7 @@ public class WeaponSO : ScriptableObject
     public float ZoomFOV = 30f;
     public float ZoomRotationSpeed = .3f;
     public int MagazineSize = 10;
+    public int MaxReserveMagazines = 5;
     public AudioClip FireSound;
     [Range(0f, 1f)] public float FireSoundVolume = 1f;
 }

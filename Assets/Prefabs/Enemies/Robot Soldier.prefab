@@ -2557,6 +2557,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 571814efee1a5c844a0944fac82d593a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Robot
+  damage: 1
+  fireRate: 0.5
+  shootRange: 5
 --- !u!114 &3214085298072346644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2570,7 +2573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   robotExplosionVFX: {fileID: 8011912162223601336, guid: 2a1d370ad7e87c94fbb9d68e904cf481, type: 3}
-  vfxOffset: {x: 0, y: 1, z: 0}
+  vfxOffset: {x: 0, y: 0, z: 0}
   health: 3
 --- !u!136 &950925627034208057
 CapsuleCollider:
