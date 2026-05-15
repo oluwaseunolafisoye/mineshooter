@@ -2559,7 +2559,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Robot
   damage: 1
   fireRate: 0.5
-  shootRange: 5
+  shootRange: 3
+  sightRange: 10
+  fieldOfViewAngle: 110
+  patrolRadius: 8
+  waypointReachedDistance: 1
 --- !u!114 &3214085298072346644
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,8 +6,10 @@ public class SpawnGate : MonoBehaviour
     [SerializeField] GameObject robotPrefab;
     [SerializeField] float spawnTime = 5f;
     [SerializeField] Transform spawnPoint;
+    [SerializeField] int maxRobots = 5;
 
     PlayerHealth player;
+    int spawned;
 
     void Start()
     {
@@ -17,9 +19,10 @@ public class SpawnGate : MonoBehaviour
 
     IEnumerator SpawnRoutine()
     {
-        while (player)
+        while (player && spawned < maxRobots)
         {
             Instantiate(robotPrefab, spawnPoint.position, transform.rotation);
+            spawned++;
             yield return new WaitForSeconds(spawnTime);
         }
     }

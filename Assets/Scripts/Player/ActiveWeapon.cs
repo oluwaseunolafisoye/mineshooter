@@ -49,9 +49,12 @@ public class ActiveWeapon : MonoBehaviour
         PlayerReload();
     }
 
-    // Adds reserve magazines to the current weapon (called by pickups)
+    // Refills current magazine and tops up reserves (called by pickups)
     public void AdjustAmmo(int magazines)
     {
+        currentMag = currentWeaponSO.MagazineSize;
+        magAmmo[currentWeaponSO] = currentMag;
+
         int current = reserveAmmo[currentWeaponSO];
         reserveAmmo[currentWeaponSO] = Mathf.Clamp(current + magazines, 0, currentWeaponSO.MaxReserveMagazines);
         UpdateAmmoText();
