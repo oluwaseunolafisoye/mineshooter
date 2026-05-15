@@ -49,7 +49,6 @@ public class ActiveWeapon : MonoBehaviour
         PlayerReload();
     }
 
-    // Refills current magazine and tops up reserves (called by pickups)
     public void AdjustAmmo(int magazines)
     {
         currentMag = currentWeaponSO.MagazineSize;

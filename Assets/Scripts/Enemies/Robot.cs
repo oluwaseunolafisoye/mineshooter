@@ -82,8 +82,6 @@ public class Robot : MonoBehaviour
         agent.SetDestination(patrolTarget);
     }
 
-    // --- Chase ---
-
     void UpdateChase()
     {
         float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
@@ -104,8 +102,6 @@ public class Robot : MonoBehaviour
 
         agent.SetDestination(player.transform.position + chaseOffset);
     }
-
-    // --- Attack ---
 
     void UpdateAttack()
     {
@@ -139,8 +135,6 @@ public class Robot : MonoBehaviour
                 playerHealth?.TakeDamage(damage);
         }
     }
-
-    // --- Perception ---
 
     bool CanSeePlayer()
     {
