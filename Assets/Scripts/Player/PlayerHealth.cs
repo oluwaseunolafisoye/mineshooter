@@ -17,19 +17,19 @@ public class PlayerHealth : MonoBehaviour
     void Awake()
     {
         currentHealth = health;
-        ChangeShieldUIBars();
+        ChangeHealthUIBars();
     }
 
     public void Heal(int amount)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, health);
-        ChangeShieldUIBars();
+        ChangeHealthUIBars();
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        ChangeShieldUIBars();
+        ChangeHealthUIBars();
         if (currentHealth <= 0)
         {
             GameOver();
@@ -53,7 +53,7 @@ public class PlayerHealth : MonoBehaviour
         Destroy(gameObject);
     }
 
-    void ChangeShieldUIBars()
+    void ChangeHealthUIBars()
     {
         for (int i = 0; i < heartImages.Length; i++)
         {
